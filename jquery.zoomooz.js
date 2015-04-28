@@ -1011,10 +1011,8 @@ if(!$.zoomooz) {
         },true);
 
         // FIXME: how to remove the html height requirement?
-        // FIXME: how to remove the transform origin?
         style.innerHTML = "html {height:100%;}" +
-                          ".noScroll{overflow:hidden !important;}" +
-                          "* {"+transformOrigin+"}";
+                          ".noScroll{overflow:hidden !important;}";
 
         document.getElementsByTagName('head')[0].appendChild(style);
 
@@ -1437,7 +1435,8 @@ if(!$.zoomooz) {
         }
     }
 
-})(jQuery);;/*
+})(jQuery);
+;/*
  * jquery.zoomooz-zoomTarget.js, part of:
  * http://janne.aukia.com/zoomooz
  *
