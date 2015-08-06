@@ -236,11 +236,12 @@
 
             rootTransformation = computeViewportTransformation(elem, inv, animScrollData, settings);
 
-            if(settings.animationendcallback) {
-                animationendcallback = function() {
+            animationendcallback = function() {
+                $(document).off("touchmove");
+                if (settings.animationendcallback) {
                     settings.animationendcallback.call(elem[0]);
-                };
-            }
+                }
+            };
 
         } else {
 
