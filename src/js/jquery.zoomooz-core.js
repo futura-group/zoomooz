@@ -167,9 +167,9 @@
         style.innerHTML = "html {height:100%;}" +
                           ".noScroll{overflow:hidden !important;}";
 
-        document.getElementsByTagName('head')[0].appendChild(style);
 
-        $(document).ready(function() {
+        $(document).ready(function () {
+            document.getElementsByTagName('head')[0].appendChild(style);
             var scrollBarWidth = window.innerWidth - $("body").width();
             style.innerHTML += "body.noScroll,html.noScroll body{margin-right:"+scrollBarWidth+"px;}";
         });
